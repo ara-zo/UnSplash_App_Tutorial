@@ -7,6 +7,13 @@ import android.widget.EditText
 /**
  * Created by arazo on 2022-02-03.
  */
+// 문자열이 json 형태인지
+fun String?.isJsonObject(): Boolean = this?.startsWith("{") == true && this.endsWith("}")
+
+// 문자열이 json 배열인지
+fun String?.isJsonArray(): Boolean = this?.startsWith("[") == true && this.endsWith("]")
+
+
 // Edit Text에 대한 익스텐션
 fun EditText.onMyTextChanged(completion: (Editable?) -> Unit) {
 	this.addTextChangedListener(object : TextWatcher {
