@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dmon/AndroidStudioProjects/UnSplash_App_Tutorial/app/src/main/res/drawable/ic_unsplash.xml" value="0.2953703703703704" />
         <entry key="..\:/Users/dmon/AndroidStudioProjects/UnSplash_App_Tutorial/app/src/main/res/layout/activity_main.xml" value="0.19746376811594202" />
+        <entry key="..\:/Users/dmon/AndroidStudioProjects/UnSplash_App_Tutorial/app/src/main/res/layout/layout_button_search.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
