@@ -12,14 +12,16 @@ enum class SEARCH_TYPE {
 	USER,
 }
 
-enum class RESPONSE_STATE {
+enum class RESPONSE_STATUS {
 	OKAY,
 	FAIL,
+	NO_CONTENT,
 }
 
 object API {
 	const val BASE_URL : String = "https://api.unsplash.com/"
 
+	// TODO commit전에 CLIENT_ID 값 지우기!
 	const val CLIENT_ID : String = ""
 
 	const val SEARCH_PHOTO: String = "search/photos"

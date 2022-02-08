@@ -1,6 +1,10 @@
 package com.arazo.unsplash_app_tutorial.retrofit
 
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
+import android.widget.Toast
+import com.arazo.unsplash_app_tutorial.App
 import com.arazo.unsplash_app_tutorial.utils.API
 import com.arazo.unsplash_app_tutorial.utils.Constants.TAG
 import com.arazo.unsplash_app_tutorial.utils.isJsonArray
@@ -32,7 +36,7 @@ object RetrofitClient {
 
 
 		// 로그를 찍기 위해 로깅 인터셉터 설정
-		val loggingInterceptor = HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger{
+		val loggingInterceptor = HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
 			override fun log(message: String) {
 //				Log.d(TAG, "RetrofitClient - log: called / message: $message")
 
@@ -42,7 +46,7 @@ object RetrofitClient {
 					else -> {
 						try {
 							Log.d(TAG, JSONObject(message).toString(4))
-						}catch (e: Exception) {
+						} catch (e: Exception) {
 							Log.d(TAG, message)
 						}
 					}
@@ -63,14 +67,24 @@ object RetrofitClient {
 				val originalRequest = chain.request()
 
 				// 쿼리 파라메터 추가
-				val addedUrl = originalRequest.url.newBuilder().addQueryParameter("client_id", API.CLIENT_ID).build()
+				val addedUrl =
+					originalRequest.url.newBuilder().addQueryParameter("client_id", API.CLIENT_ID)
+						.build()
 
 				val finalRequest = originalRequest.newBuilder()
-											.url(addedUrl)
-											.method(originalRequest.method, originalRequest.body)
-											.build()
+					.url(addedUrl)
+					.method(originalRequest.method, originalRequest.body)
+					.build()
 
-				return chain.proceed(finalRequest)
+				var response = chain.proceed(finalRequest)
+
+				if (response.code != 200) {
+					Handler(Looper.getMainLooper()).post {
+						Toast.makeText(App.instance, "${response.code} 에러입니다.", Toast.LENGTH_SHORT).show()
+					}
+				}
+
+				return response
 			}
 		})
 

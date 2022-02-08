@@ -22,7 +22,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_gravity="center"
-        android:indeterminateTint="@color/purple_500"
+        android:indeterminateTint="@color/colorPrimaryDark"
         android:visibility="gone" />
 
 </FrameLayout>

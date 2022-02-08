@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="사진검색"
-            app:boxStrokeColor="@color/purple_500"
+            app:boxStrokeColor="@color/colorPrimaryDark"
             app:counterEnabled="true"
             app:counterMaxLength="12"
             app:endIconMode="clear_text"
