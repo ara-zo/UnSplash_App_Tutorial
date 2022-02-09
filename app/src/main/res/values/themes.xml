@@ -6,8 +6,8 @@
         <item name="colorPrimaryVariant">@color/colorAccent</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-<!--        <item name="colorSecondary">@color/teal_200</item>-->
-<!--        <item name="colorSecondaryVariant">@color/teal_700</item>-->
+        <!--        <item name="colorSecondary">@color/teal_200</item>-->
+        <!--        <item name="colorSecondaryVariant">@color/teal_700</item>-->
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
@@ -17,8 +17,28 @@
     <!--  메테리얼 테마  -->
     <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/colorPrimaryDark</item>
-        <item name="colorPrimaryVariant">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- 최상단 status 바 바탕색 -->
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+
+        <!-- 강조색 -->
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="MyRadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="colorControlNormal">@color/colorLightGray</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorLightPink</item>
+    </style>
+
+    <style name="MySwitchButton" parent="">
+        <item name="colorSwitchThumbNormal">@color/colorLightGray</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="android:colorForeground">@color/colorLightGray</item>
     </style>
 </resources>

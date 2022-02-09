@@ -35,16 +35,14 @@ class MainActivity : AppCompatActivity() {
 					Log.d(TAG, "onCreate: 사진검색 버튼 클릭!")
 					search_term_text_layout.hint = "사진검색"
 					search_term_text_layout.startIconDrawable =
-						resources.getDrawable(R.drawable.ic_baseline_photo_library_24,
-							resources.newTheme())
+						resources.getDrawable(R.drawable.ic_baseline_photo_library_24, resources.newTheme())
 					this.currentSearchType = SEARCH_TYPE.PHOTO
 				}
 				R.id.user_search_radio_btn -> {
 					Log.d(TAG, "onCreate: 사용자검색 버튼 클릭!")
 					search_term_text_layout.hint = "사용자검색"
 					search_term_text_layout.startIconDrawable =
-						resources.getDrawable(R.drawable.ic_baseline_person_24,
-							resources.newTheme())
+						resources.getDrawable(R.drawable.ic_baseline_person_24, resources.newTheme())
 					this.currentSearchType = SEARCH_TYPE.USER
 				}
 			}
