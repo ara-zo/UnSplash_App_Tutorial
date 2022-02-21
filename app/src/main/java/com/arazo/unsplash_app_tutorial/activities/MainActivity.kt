@@ -1,14 +1,13 @@
-package com.arazo.unsplash_app_tutorial
+package com.arazo.unsplash_app_tutorial.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.arazo.unsplash_app_tutorial.R
 import com.arazo.unsplash_app_tutorial.retrofit.RetrofitManager
 import com.arazo.unsplash_app_tutorial.utils.Constants.TAG
 import com.arazo.unsplash_app_tutorial.utils.RESPONSE_STATUS

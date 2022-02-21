@@ -24,6 +24,7 @@
 
         <!-- 강조색 -->
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">#EC407A</item>
         <item name="colorOnPrimary">@color/white</item>
 
         <!-- Status bar color. -->

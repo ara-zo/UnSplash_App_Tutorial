@@ -1,4 +1,4 @@
-package com.arazo.unsplash_app_tutorial.recyeclerview
+package com.arazo.unsplash_app_tutorial.recyclerView
 
 import android.util.Log
 import android.view.View

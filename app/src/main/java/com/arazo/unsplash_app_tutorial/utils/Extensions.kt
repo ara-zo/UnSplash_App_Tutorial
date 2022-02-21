@@ -3,6 +3,8 @@ package com.arazo.unsplash_app_tutorial.utils
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * Created by arazo on 2022-02-03.
@@ -13,6 +15,11 @@ fun String?.isJsonObject(): Boolean = this?.startsWith("{") == true && this.ends
 // 문자열이 json 배열인지
 fun String?.isJsonArray(): Boolean = this?.startsWith("[") == true && this.endsWith("]")
 
+// 날짜 포맷
+fun Date.toSimpleString() : String {
+	val format = SimpleDateFormat("HH:mm:ss")
+	return format.format(this)
+}
 
 // Edit Text에 대한 익스텐션
 fun EditText.onMyTextChanged(completion: (Editable?) -> Unit) {

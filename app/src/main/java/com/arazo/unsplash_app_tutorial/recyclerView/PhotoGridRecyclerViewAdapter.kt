@@ -1,16 +1,15 @@
-package com.arazo.unsplash_app_tutorial.recyeclerview
+package com.arazo.unsplash_app_tutorial.recyclerView
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.arazo.unsplash_app_tutorial.App
 import com.arazo.unsplash_app_tutorial.R
 import com.arazo.unsplash_app_tutorial.model.Photo
 
 /**
  * Created by arazo on 2022-02-08.
  */
-class PhotoGridRecyeclerViewAdapter : RecyclerView.Adapter<PhotoItemViewHolder>() {
+class PhotoGridRecyclerViewAdapter : RecyclerView.Adapter<PhotoItemViewHolder>() {
 
 	private var photoList = ArrayList<Photo>()
 
